@@ -147,5 +147,110 @@ public class Belediye {
         
 }   
     
-            
+            import java.util.ArrayList;
+
+
+public class Üsküdar extends Belediye {
+   
+    public Üsküdar(String isim_soyisim) {
+        super.Belediye(isim_soyisim);
+    }
+    
+    ArrayList<String>vatandaşlar=new ArrayList<>();
+
+   
+    
+    public void Ekle(){
+    vatandaşlar.add("Ahmet Nuri Keser");
+    vatandaşlar.add("Mehmet Can Yıldız" );
+    vatandaşlar.add("Livanur Erdem");
+    vatandaşlar.add("Buse Öncü");
+    vatandaşlar.add("Ahmet Tarık Seven");
+    vatandaşlar.add("Doğukan Kaymaz");
+    vatandaşlar.add("Muhammed Altay");
+    vatandaşlar.add("Burak Can Eyvazoğlu");
+    vatandaşlar.add("Muhammed Eset Tepeler");
+    }
+
+    @Override
+    public void SürücüBelgesi(boolean rapor, boolean resim) {
+        super.SürücüBelgesi(rapor, resim);
+    }
+
+    
+    public void SoyisimDeğiştirme(String isim_soyisim,String isim_yenisoyad, String durum) {
+        super.SoyisimDeğiştirme(isim_yenisoyad, durum);
+        vatandaşlar.add(isim_yenisoyad);
+        vatandaşlar.remove(isim_soyisim);
+    }
+
+    @Override
+    public void İsimDeğiştirme( String yeniisim_soyad,String isim_soyisim) {
+        super.İsimDeğiştirme(isim_soyisim, yeniisim_soyad); 
+        vatandaşlar.add(yeniisim_soyad);
+        vatandaşlar.remove(isim_soyisim);
+    }
+
+    
+    
+    
+}
+import java.util.Scanner;
+
+
+public class Giriş {
+   public void Sistem() {
+     
+
+      Scanner input = new Scanner(System.in);
+        System.out.println(" Hoşgeldiniz...");
+        
+      System.out.println("**");
+    
+      String islemler = "1. Nüfus İşlemleri\n"
+                   + "2. Vergi ödeme İşlemleri\n";
+                
+     System.out.println(islemler); 
+
+     System.out.println("**");
+
+    while(true){
+        System.out.println("\nİşleminizi Seçiniz : ");
+        String islem = input.nextLine();
+
+          if (islem.equals("1.Nüfus İşlemleri")) {
+              System.out.println("**");
+    
+          String islemler1 = "1.İsim değişikliği\n"
+                   + "2. Soyisim değişikliği\n" 
+                  + "3.Sürücü belgesi alma\n";
+              System.out.println(islemler1);   
+              System.out.println("**");
+              System.out.println("Yapmak istediğiniz diğer işlemi söyleyiniz");
+              String islem1 = input.nextLine();
+              if(islem1.equals("1.İsim değişikliği")){
+                  
+              }
+          
+          }
+              
+        }
+
+ }         
+
+   }
+public class Zeytinburnu {
+    
+}
+public class Test {
+    public static void main(String[] args) {
+        
+       
+        
+      
+      
+         
+}
+
+    }
           
